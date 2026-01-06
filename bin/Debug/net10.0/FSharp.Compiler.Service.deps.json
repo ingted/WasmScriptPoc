@@ -1,0 +1,56 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "FSharp.Compiler.Service/1.0.0": {
+        "dependencies": {
+          "FSharp.Core": "1.0.0",
+          "FSharp.DependencyManager.Nuget": "1.0.0"
+        },
+        "runtime": {
+          "FSharp.Compiler.Service.dll": {}
+        }
+      },
+      "FSharp.Core/1.0.0": {
+        "runtime": {
+          "FSharp.Core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "FSharp.DependencyManager.Nuget/1.0.0": {
+        "dependencies": {
+          "FSharp.Core": "1.0.0"
+        },
+        "runtime": {
+          "FSharp.DependencyManager.Nuget.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FSharp.Compiler.Service/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FSharp.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FSharp.DependencyManager.Nuget/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

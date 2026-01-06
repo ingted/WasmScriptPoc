@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<linker>
+  <!-- Our application -->
+  <assembly fullname="WasmScriptPoc"></assembly>
+  
+  <!-- Assemblies needed by FCS or that we want referenced, but illink would otherwise remove -->
+  <assembly fullname="netstandard"></assembly>
+  <assembly fullname="System.Collections"></assembly>
+  <assembly fullname="System.Console"></assembly>
+  <assembly fullname="System.Globalization"></assembly>
+  <assembly fullname="System.IO"></assembly>
+  <assembly fullname="System.Linq.Expressions"></assembly>
+  <assembly fullname="System.Net.Http"></assembly>
+  <assembly fullname="System.Numerics"></assembly>
+  <assembly fullname="System.Reflection"></assembly>
+  <assembly fullname="System.Runtime"></assembly>
+  <assembly fullname="System.Runtime.Extensions"></assembly>
+  <assembly fullname="System.Threading"></assembly>
+  <assembly fullname="System.Threading.Tasks"></assembly>
+  <assembly fullname="System.Xml.Linq"></assembly>
+  <assembly fullname="mscorlib"></assembly>
+</linker>
