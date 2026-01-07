@@ -5,7 +5,7 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
   "mainAssemblyName": "WasmScriptPoc",
   "applicationEnvironment": "Development",
   "resources": {
-    "hash": "sha256-itlJR4akDw7D7GroXq7rm3AZPt6Il0vOSLjE5/bF+Gc=",
+    "hash": "sha256-FDCX7xDnIcxXafpKWw6smwiTDeOT13OH7m5MfkESyCc=",
     "jsModuleNative": [
       {
         "name": "dotnet.native.cs8mcre4gh.js"
@@ -52,6 +52,16 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
       }
     ],
     "assembly": [
+      {
+        "virtualPath": "Bolero.Html.wasm",
+        "name": "Bolero.Html.c5b0hbsqpf.wasm",
+        "integrity": "sha256-kMqZqqZoHQyMoaCYwCvXoXGZQfcBZ8ukzc5S2a8WJeY="
+      },
+      {
+        "virtualPath": "Bolero.wasm",
+        "name": "Bolero.ao5jjig0sk.wasm",
+        "integrity": "sha256-huEOK9tw4KnG+z4ZzLG/LR9br/9aSFAKz+fmblbY4Ko="
+      },
       {
         "virtualPath": "Elmish.wasm",
         "name": "Elmish.pb6cyinso1.wasm",
@@ -164,8 +174,8 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
       },
       {
         "virtualPath": "Microsoft.Extensions.Http.wasm",
-        "name": "Microsoft.Extensions.Http.19whzah939.wasm",
-        "integrity": "sha256-hXiPpWPveO5qsdEW2Gv44+2FTo1+h44csvRy7ob7mSM="
+        "name": "Microsoft.Extensions.Http.jplrhyh948.wasm",
+        "integrity": "sha256-WZDaGkaj9Dm3pM+f0wKlw7oWs/Jrsj57mUt/ePjoKK4="
       },
       {
         "virtualPath": "Microsoft.Extensions.Logging.wasm",
@@ -1058,24 +1068,14 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
         "integrity": "sha256-lgUuHy5ZKKRbgYfoW8t1tWMzuTpZuIcjJroQScqry7w="
       },
       {
-        "virtualPath": "Bolero.wasm",
-        "name": "Bolero.45y2lp3wxb.wasm",
-        "integrity": "sha256-WIJ4///LS/plp7HJgvgy8nj6o69jkx9MJMtfbtdzSi4="
-      },
-      {
-        "virtualPath": "Bolero.Html.wasm",
-        "name": "Bolero.Html.5auy11gf2t.wasm",
-        "integrity": "sha256-My2mo5RR90OEoSFRzojwJraGzpKRsghooA6JLMtG0Ik="
-      },
-      {
         "virtualPath": "FSharp.Compiler.Service.wasm",
         "name": "FSharp.Compiler.Service.y25da23jsl.wasm",
         "integrity": "sha256-BiPlrfLO4o//Rf8X/3FLl+7bC9TYvXORbLqk4SNX4C4="
       },
       {
         "virtualPath": "WasmScriptPoc.wasm",
-        "name": "WasmScriptPoc.h5wuytawcv.wasm",
-        "integrity": "sha256-u2u3Isz+xz2BEiO+Ib+QXs2uUxnyEwkKUYACNWUIogk="
+        "name": "WasmScriptPoc.zwkg73jl1r.wasm",
+        "integrity": "sha256-HW9acmmyLi7Ax7c724rjT/QkDo0GCq1cSv38xD+JjjA="
       }
     ],
     "pdb": [
@@ -1085,19 +1085,9 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
         "integrity": "sha256-ezLz2jrSPH6xnQeZtg6vq0KBtbxaf/kaDtuABPmwOos="
       },
       {
-        "virtualPath": "Bolero.Html.pdb",
-        "name": "Bolero.Html.wpfogariib.pdb",
-        "integrity": "sha256-lA07HZLJlyhY1EcfSPjglPz54wEDwxcZHP2KtaMB3d8="
-      },
-      {
-        "virtualPath": "Bolero.pdb",
-        "name": "Bolero.5z50lwmurj.pdb",
-        "integrity": "sha256-v0yTPyv9n1P0HP2Sy+QIOnFwLji6tHLnC2EylhcRYe8="
-      },
-      {
         "virtualPath": "WasmScriptPoc.pdb",
-        "name": "WasmScriptPoc.4cvyc8cu0c.pdb",
-        "integrity": "sha256-3EAeYRDuPheT06j6Y9NbRfpaYptYar5o57Y46DsNprY="
+        "name": "WasmScriptPoc.8ig4kla3xr.pdb",
+        "integrity": "sha256-cGtuTx6Bc6jQML4HxJVi69x0hqOHrx1LxGFdTI08qV4="
       }
     ],
     "satelliteResources": {

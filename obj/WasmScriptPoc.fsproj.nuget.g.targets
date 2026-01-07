@@ -7,5 +7,6 @@
     <Import Project="$(NuGetPackageRoot)microsoft.extensions.logging.abstractions\10.0.0\buildTransitive\net8.0\Microsoft.Extensions.Logging.Abstractions.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.extensions.logging.abstractions\10.0.0\buildTransitive\net8.0\Microsoft.Extensions.Logging.Abstractions.targets')" />
     <Import Project="$(NuGetPackageRoot)microsoft.aspnetcore.components.webassembly.devserver\10.0.0\build\Microsoft.AspNetCore.Components.WebAssembly.DevServer.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.aspnetcore.components.webassembly.devserver\10.0.0\build\Microsoft.AspNetCore.Components.WebAssembly.DevServer.targets')" />
     <Import Project="$(NuGetPackageRoot)microsoft.aspnetcore.components.analyzers\10.0.0\buildTransitive\netstandard2.0\Microsoft.AspNetCore.Components.Analyzers.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.aspnetcore.components.analyzers\10.0.0\buildTransitive\netstandard2.0\Microsoft.AspNetCore.Components.Analyzers.targets')" />
+    <Import Project="$(NuGetPackageRoot)bolero\0.24.39\build\Bolero.targets" Condition="Exists('$(NuGetPackageRoot)bolero\0.24.39\build\Bolero.targets')" />
   </ImportGroup>
 </Project>

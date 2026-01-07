@@ -2,6 +2,33 @@
   "version": 3,
   "targets": {
     "net10.0": {
+      "Bolero/0.24.39": {
+        "type": "package",
+        "dependencies": {
+          "Elmish": "[4.0.1, 5.0.0)",
+          "FSharp.Core": "6.0.0",
+          "FSharp.SystemTextJson": "0.19.13",
+          "Microsoft.AspNetCore.Components": "8.0.0",
+          "Microsoft.AspNetCore.Components.WebAssembly": "8.0.0",
+          "Microsoft.Extensions.Http": "6.0.0",
+          "Microsoft.JSInterop.WebAssembly": "8.0.0"
+        },
+        "compile": {
+          "ref/net8.0/Bolero.Html.dll": {},
+          "ref/net8.0/Bolero.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Bolero.Html.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/Bolero.dll": {
+            "related": ".Html.xml;.pdb;.xml"
+          }
+        },
+        "build": {
+          "build/Bolero.targets": {}
+        }
+      },
       "Elmish/4.0.1": {
         "type": "package",
         "compile": {
@@ -455,28 +482,23 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "Microsoft.Extensions.Http/9.0.0": {
+      "Microsoft.Extensions.Http/6.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Configuration.Abstractions": "9.0.0",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.0",
-          "Microsoft.Extensions.Diagnostics": "9.0.0",
-          "Microsoft.Extensions.Logging": "9.0.0",
-          "Microsoft.Extensions.Logging.Abstractions": "9.0.0",
-          "Microsoft.Extensions.Options": "9.0.0"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0"
         },
         "compile": {
-          "lib/net9.0/Microsoft.Extensions.Http.dll": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net9.0/Microsoft.Extensions.Http.dll": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
             "related": ".xml"
           }
-        },
-        "build": {
-          "buildTransitive/net8.0/_._": {}
         }
       },
       "Microsoft.Extensions.Logging/10.0.0": {
@@ -631,48 +653,6 @@
           "build/Microsoft.NET.Sdk.WebAssembly.Pack.targets": {}
         }
       },
-      "Bolero/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v9.0",
-        "dependencies": {
-          "Elmish": "4.0.1",
-          "FSharp.Core": "8.0.100",
-          "FSharp.SystemTextJson": "0.19.13",
-          "Microsoft.AspNetCore.Authorization": "9.0.0",
-          "Microsoft.AspNetCore.Components": "9.0.0",
-          "Microsoft.AspNetCore.Components.Analyzers": "9.0.0",
-          "Microsoft.AspNetCore.Components.Forms": "9.0.0",
-          "Microsoft.AspNetCore.Components.Web": "9.0.0",
-          "Microsoft.AspNetCore.Components.WebAssembly": "9.0.0",
-          "Microsoft.AspNetCore.Metadata": "9.0.0",
-          "Microsoft.Extensions.Configuration": "9.0.0",
-          "Microsoft.Extensions.Configuration.Abstractions": "9.0.0",
-          "Microsoft.Extensions.Configuration.Binder": "9.0.0",
-          "Microsoft.Extensions.Configuration.FileExtensions": "9.0.0",
-          "Microsoft.Extensions.Configuration.Json": "9.0.0",
-          "Microsoft.Extensions.DependencyInjection": "9.0.0",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.0",
-          "Microsoft.Extensions.Diagnostics": "9.0.0",
-          "Microsoft.Extensions.Diagnostics.Abstractions": "9.0.0",
-          "Microsoft.Extensions.FileProviders.Abstractions": "9.0.0",
-          "Microsoft.Extensions.FileProviders.Physical": "9.0.0",
-          "Microsoft.Extensions.FileSystemGlobbing": "9.0.0",
-          "Microsoft.Extensions.Http": "9.0.0",
-          "Microsoft.Extensions.Logging": "9.0.0",
-          "Microsoft.Extensions.Logging.Abstractions": "9.0.0",
-          "Microsoft.Extensions.Options": "9.0.0",
-          "Microsoft.Extensions.Options.ConfigurationExtensions": "9.0.0",
-          "Microsoft.Extensions.Primitives": "9.0.0",
-          "Microsoft.JSInterop": "9.0.0",
-          "Microsoft.JSInterop.WebAssembly": "9.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Bolero.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Bolero.dll": {}
-        }
-      },
       "Bolero.FSharp.Compiler.Service/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -685,23 +665,37 @@
         },
         "runtime": {
           "bin/placeholder/Bolero.FSharp.Compiler.Service.dll": {}
-        }
-      },
-      "Bolero.Html/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v9.0",
-        "dependencies": {
-          "Bolero": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Bolero.Html.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Bolero.Html.dll": {}
         }
       }
     },
     "net10.0/browser-wasm": {
+      "Bolero/0.24.39": {
+        "type": "package",
+        "dependencies": {
+          "Elmish": "[4.0.1, 5.0.0)",
+          "FSharp.Core": "6.0.0",
+          "FSharp.SystemTextJson": "0.19.13",
+          "Microsoft.AspNetCore.Components": "8.0.0",
+          "Microsoft.AspNetCore.Components.WebAssembly": "8.0.0",
+          "Microsoft.Extensions.Http": "6.0.0",
+          "Microsoft.JSInterop.WebAssembly": "8.0.0"
+        },
+        "compile": {
+          "ref/net8.0/Bolero.Html.dll": {},
+          "ref/net8.0/Bolero.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Bolero.Html.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/Bolero.dll": {
+            "related": ".Html.xml;.pdb;.xml"
+          }
+        },
+        "build": {
+          "build/Bolero.targets": {}
+        }
+      },
       "Elmish/4.0.1": {
         "type": "package",
         "compile": {
@@ -1155,28 +1149,23 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "Microsoft.Extensions.Http/9.0.0": {
+      "Microsoft.Extensions.Http/6.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Configuration.Abstractions": "9.0.0",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.0",
-          "Microsoft.Extensions.Diagnostics": "9.0.0",
-          "Microsoft.Extensions.Logging": "9.0.0",
-          "Microsoft.Extensions.Logging.Abstractions": "9.0.0",
-          "Microsoft.Extensions.Options": "9.0.0"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0"
         },
         "compile": {
-          "lib/net9.0/Microsoft.Extensions.Http.dll": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net9.0/Microsoft.Extensions.Http.dll": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
             "related": ".xml"
           }
-        },
-        "build": {
-          "buildTransitive/net8.0/_._": {}
         }
       },
       "Microsoft.Extensions.Logging/10.0.0": {
@@ -1331,48 +1320,6 @@
           "build/Microsoft.NET.Sdk.WebAssembly.Pack.targets": {}
         }
       },
-      "Bolero/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v9.0",
-        "dependencies": {
-          "Elmish": "4.0.1",
-          "FSharp.Core": "8.0.100",
-          "FSharp.SystemTextJson": "0.19.13",
-          "Microsoft.AspNetCore.Authorization": "9.0.0",
-          "Microsoft.AspNetCore.Components": "9.0.0",
-          "Microsoft.AspNetCore.Components.Analyzers": "9.0.0",
-          "Microsoft.AspNetCore.Components.Forms": "9.0.0",
-          "Microsoft.AspNetCore.Components.Web": "9.0.0",
-          "Microsoft.AspNetCore.Components.WebAssembly": "9.0.0",
-          "Microsoft.AspNetCore.Metadata": "9.0.0",
-          "Microsoft.Extensions.Configuration": "9.0.0",
-          "Microsoft.Extensions.Configuration.Abstractions": "9.0.0",
-          "Microsoft.Extensions.Configuration.Binder": "9.0.0",
-          "Microsoft.Extensions.Configuration.FileExtensions": "9.0.0",
-          "Microsoft.Extensions.Configuration.Json": "9.0.0",
-          "Microsoft.Extensions.DependencyInjection": "9.0.0",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.0",
-          "Microsoft.Extensions.Diagnostics": "9.0.0",
-          "Microsoft.Extensions.Diagnostics.Abstractions": "9.0.0",
-          "Microsoft.Extensions.FileProviders.Abstractions": "9.0.0",
-          "Microsoft.Extensions.FileProviders.Physical": "9.0.0",
-          "Microsoft.Extensions.FileSystemGlobbing": "9.0.0",
-          "Microsoft.Extensions.Http": "9.0.0",
-          "Microsoft.Extensions.Logging": "9.0.0",
-          "Microsoft.Extensions.Logging.Abstractions": "9.0.0",
-          "Microsoft.Extensions.Options": "9.0.0",
-          "Microsoft.Extensions.Options.ConfigurationExtensions": "9.0.0",
-          "Microsoft.Extensions.Primitives": "9.0.0",
-          "Microsoft.JSInterop": "9.0.0",
-          "Microsoft.JSInterop.WebAssembly": "9.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Bolero.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Bolero.dll": {}
-        }
-      },
       "Bolero.FSharp.Compiler.Service/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -1385,24 +1332,42 @@
         },
         "runtime": {
           "bin/placeholder/Bolero.FSharp.Compiler.Service.dll": {}
-        }
-      },
-      "Bolero.Html/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v9.0",
-        "dependencies": {
-          "Bolero": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Bolero.Html.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Bolero.Html.dll": {}
         }
       }
     }
   },
   "libraries": {
+    "Bolero/0.24.39": {
+      "sha512": "uF1eUgWMFz5J5zwqo5oHr6PnvM0ur9GHr2kX4Jhl1phPwDrAoNLYaCnQdEXJ6lJO5hS5L4rCsENeRwgWXmp+7w==",
+      "type": "package",
+      "path": "bolero/0.24.39",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "bolero.0.24.39.nupkg.sha512",
+        "bolero.nuspec",
+        "build/Bolero.targets",
+        "build/roots.xml",
+        "lib/net6.0/Bolero.Html.dll",
+        "lib/net6.0/Bolero.Html.xml",
+        "lib/net6.0/Bolero.dll",
+        "lib/net6.0/Bolero.pdb",
+        "lib/net6.0/Bolero.xml",
+        "lib/net8.0/Bolero.Html.dll",
+        "lib/net8.0/Bolero.Html.xml",
+        "lib/net8.0/Bolero.dll",
+        "lib/net8.0/Bolero.pdb",
+        "lib/net8.0/Bolero.xml",
+        "ref/net6.0/Bolero.Html.dll",
+        "ref/net6.0/Bolero.dll",
+        "ref/net8.0/Bolero.Html.dll",
+        "ref/net8.0/Bolero.dll",
+        "typeproviders/fsharp41/netstandard2.0/Bolero.Templating.Provider.dll",
+        "typeproviders/fsharp41/netstandard2.0/HtmlAgilityPack.dll",
+        "typeproviders/fsharp41/netstandard2.0/Microsoft.AspNetCore.Components.Web.dll",
+        "typeproviders/fsharp41/netstandard2.0/Microsoft.AspNetCore.Components.dll"
+      ]
+    },
     "Elmish/4.0.1": {
       "sha512": "6AI++9Ula33yMUG9F83iVrZClurQn5cgriwK7aX9FvlhJFXgRB6IYybD+wx26NNhdPOKQIvfBYZYWwRWWWqJmA==",
       "type": "package",
@@ -2139,30 +2104,21 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Extensions.Http/9.0.0": {
-      "sha512": "DqI4q54U4hH7bIAq9M5a/hl5Odr/KBAoaZ0dcT4OgutD8dook34CbkvAfAIzkMVjYXiL+E5ul9etwwqiX4PHGw==",
+    "Microsoft.Extensions.Http/6.0.0": {
+      "sha512": "15+pa2G0bAMHbHewaQIdr/y6ag2H3yh4rd9hTXavtWDzQBkvpe2RMqFg8BxDpcQWssmjmBApGPcw93QRz6YcMg==",
       "type": "package",
-      "path": "microsoft.extensions.http/9.0.0",
+      "path": "microsoft.extensions.http/6.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
-        "PACKAGE.md",
         "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/net461/Microsoft.Extensions.Http.targets",
-        "buildTransitive/net462/_._",
-        "buildTransitive/net8.0/_._",
-        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.Http.targets",
-        "lib/net462/Microsoft.Extensions.Http.dll",
-        "lib/net462/Microsoft.Extensions.Http.xml",
-        "lib/net8.0/Microsoft.Extensions.Http.dll",
-        "lib/net8.0/Microsoft.Extensions.Http.xml",
-        "lib/net9.0/Microsoft.Extensions.Http.dll",
-        "lib/net9.0/Microsoft.Extensions.Http.xml",
+        "lib/net461/Microsoft.Extensions.Http.dll",
+        "lib/net461/Microsoft.Extensions.Http.xml",
         "lib/netstandard2.0/Microsoft.Extensions.Http.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Http.xml",
-        "microsoft.extensions.http.9.0.0.nupkg.sha512",
+        "microsoft.extensions.http.6.0.0.nupkg.sha512",
         "microsoft.extensions.http.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -2461,27 +2417,16 @@
         "tools/net472/Microsoft.NET.WebAssembly.Webcil.dll"
       ]
     },
-    "Bolero/1.0.0": {
-      "type": "project",
-      "path": "../Bolero/src/Bolero/Bolero.fsproj",
-      "msbuildProject": "../Bolero/src/Bolero/Bolero.fsproj"
-    },
     "Bolero.FSharp.Compiler.Service/1.0.0": {
       "type": "project",
       "path": "../Bolero.FCS.Build - Copy/src/Compiler/Bolero.FSharp.Compiler.Service.fsproj",
       "msbuildProject": "../Bolero.FCS.Build - Copy/src/Compiler/Bolero.FSharp.Compiler.Service.fsproj"
-    },
-    "Bolero.Html/1.0.0": {
-      "type": "project",
-      "path": "../Bolero/src/Bolero.Html/Bolero.Html.fsproj",
-      "msbuildProject": "../Bolero/src/Bolero.Html/Bolero.Html.fsproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
-      "Bolero >= 1.0.0",
+      "Bolero >= 0.24.39",
       "Bolero.FSharp.Compiler.Service >= 1.0.0",
-      "Bolero.Html >= 1.0.0",
       "FSharp.Core >= 10.0.101",
       "Microsoft.AspNetCore.Components.WebAssembly >= 10.0.0",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 10.0.0",
@@ -2527,12 +2472,6 @@
           "projectReferences": {
             "M:\\git\\Bolero.FCS.Build - Copy\\src\\Compiler\\Bolero.FSharp.Compiler.Service.fsproj": {
               "projectPath": "M:\\git\\Bolero.FCS.Build - Copy\\src\\Compiler\\Bolero.FSharp.Compiler.Service.fsproj"
-            },
-            "M:\\git\\Bolero\\src\\Bolero.Html\\Bolero.Html.fsproj": {
-              "projectPath": "M:\\git\\Bolero\\src\\Bolero.Html\\Bolero.Html.fsproj"
-            },
-            "M:\\git\\Bolero\\src\\Bolero\\Bolero.fsproj": {
-              "projectPath": "M:\\git\\Bolero\\src\\Bolero\\Bolero.fsproj"
             }
           }
         }
@@ -2548,6 +2487,11 @@
       "net10.0": {
         "targetAlias": "net10.0",
         "dependencies": {
+          "Bolero": {
+            "target": "Package",
+            "version": "[0.24.39, )",
+            "generatePathProperty": true
+          },
           "FSharp.Core": {
             "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
             "target": "Package",

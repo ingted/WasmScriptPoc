@@ -33,13 +33,12 @@
         <HintPath>..\Bolero.FCS.Build - Copy\artifacts\bin\FSharp.Core\$(Configuration)\netstandard2.0\FSharp.Core.dll</HintPath>
     </Reference>
     -->
-    <ProjectReference Include="..\Bolero\src\Bolero.Html\Bolero.Html.fsproj" />
-    <ProjectReference Include="..\Bolero\src\Bolero\Bolero.fsproj" />
   </ItemGroup>
   <ItemGroup>
     <None Include="linker.xml" />
     <Content Include="linker.xml" />
     <BlazorLinkerDescriptor Include="linker.xml" />
+    <PackageReference Include="Bolero" Version="0.24.39" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="10.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="10.0.0" PrivateAssets="all" />
   </ItemGroup>
