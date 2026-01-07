@@ -35,3 +35,10 @@ This is a Proof of Concept (POC) for running F# scripts in the browser using Web
 - `Main.fs`: Contains the UI (Elmish), Compiler logic, and EntryPoint.
 - `WasmScriptPoc.fsproj`: Project configuration, references local Bolero source and Bolero.FCS.Build package.
 - `wwwroot/refs`: Directory populated with DLLs during build, used by the compiler for references.
+
+Bolero.FCS is here: https://github.com/ingted/Bolero.FCS.Build
+
+This Bolero FCS is based on commit: 6396a18a707b29f552373b8ff5650c98beb9bcfc of https://github.com/dotnet/fsharp
+Parallel compilation is removed...
+
+<img width="1371" height="776" alt="image" src="https://github.com/user-attachments/assets/637ae002-3cff-4ca1-a163-f13103094117" />
