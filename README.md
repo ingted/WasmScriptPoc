@@ -42,3 +42,5 @@ This Bolero FCS is based on commit: 6396a18a707b29f552373b8ff5650c98beb9bcfc of 
 Parallel compilation is removed...
 
 <img width="1371" height="776" alt="image" src="https://github.com/user-attachments/assets/637ae002-3cff-4ca1-a163-f13103094117" />
+
+Related: https://github.com/ingted/TryFSharpOnWasm10
