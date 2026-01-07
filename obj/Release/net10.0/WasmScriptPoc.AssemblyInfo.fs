@@ -10,7 +10,7 @@ open System.Reflection
 [<assembly: System.Reflection.AssemblyCompanyAttribute("WasmScriptPoc")>]
 [<assembly: System.Reflection.AssemblyConfigurationAttribute("Release")>]
 [<assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")>]
-[<assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1c438f534c1316ac3c91fd83439f65840e2a908e")>]
+[<assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+789094838ab165edfbf71110254ed86c88816fbe")>]
 [<assembly: System.Reflection.AssemblyProductAttribute("WasmScriptPoc")>]
 [<assembly: System.Reflection.AssemblyTitleAttribute("WasmScriptPoc")>]
 [<assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")>]
