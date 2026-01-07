@@ -5,7 +5,7 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
   "mainAssemblyName": "WasmScriptPoc",
   "applicationEnvironment": "Development",
   "resources": {
-    "hash": "sha256-FDCX7xDnIcxXafpKWw6smwiTDeOT13OH7m5MfkESyCc=",
+    "hash": "sha256-OBE1YBYMy8djJhVMhTT2WJ4zhUJ9X90vnALNOwroUSw=",
     "jsModuleNative": [
       {
         "name": "dotnet.native.cs8mcre4gh.js"
@@ -1069,25 +1069,25 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
       },
       {
         "virtualPath": "FSharp.Compiler.Service.wasm",
-        "name": "FSharp.Compiler.Service.y25da23jsl.wasm",
-        "integrity": "sha256-BiPlrfLO4o//Rf8X/3FLl+7bC9TYvXORbLqk4SNX4C4="
+        "name": "FSharp.Compiler.Service.hoz5k5hn4p.wasm",
+        "integrity": "sha256-HyS2LbweRmD4jP/4jtUCsVMeDVQAIw2PuhWlQJYnKKw="
       },
       {
         "virtualPath": "WasmScriptPoc.wasm",
-        "name": "WasmScriptPoc.zwkg73jl1r.wasm",
-        "integrity": "sha256-HW9acmmyLi7Ax7c724rjT/QkDo0GCq1cSv38xD+JjjA="
+        "name": "WasmScriptPoc.j4xzzhoocf.wasm",
+        "integrity": "sha256-c/l2F2iVJboZvsnrmYu44K9pNdzlbjqjhlWKiMNCcIw="
       }
     ],
     "pdb": [
       {
         "virtualPath": "FSharp.Compiler.Service.pdb",
-        "name": "FSharp.Compiler.Service.5c9t5p1zot.pdb",
-        "integrity": "sha256-ezLz2jrSPH6xnQeZtg6vq0KBtbxaf/kaDtuABPmwOos="
+        "name": "FSharp.Compiler.Service.eootz3izkn.pdb",
+        "integrity": "sha256-LvF3Ag73oZMkpFNZiTHY4JAtsVyTjk+IUFip4j++Djo="
       },
       {
         "virtualPath": "WasmScriptPoc.pdb",
-        "name": "WasmScriptPoc.8ig4kla3xr.pdb",
-        "integrity": "sha256-cGtuTx6Bc6jQML4HxJVi69x0hqOHrx1LxGFdTI08qV4="
+        "name": "WasmScriptPoc.lutdu06wpk.pdb",
+        "integrity": "sha256-XRa2zZOFiXBe7Kt+oNA+w8kkISFDNjOif+nNunwxpyc="
       }
     ],
     "satelliteResources": {
