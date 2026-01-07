@@ -5,7 +5,7 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
   "mainAssemblyName": "WasmScriptPoc",
   "applicationEnvironment": "Development",
   "resources": {
-    "hash": "sha256-AZV9cmLu9HCue3GBUmobVgCk09WgIKz2r0uV0723V6A=",
+    "hash": "sha256-itlJR4akDw7D7GroXq7rm3AZPt6Il0vOSLjE5/bF+Gc=",
     "jsModuleNative": [
       {
         "name": "dotnet.native.cs8mcre4gh.js"
@@ -63,6 +63,11 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
         "integrity": "sha256-CtgE9F/W44ecav366F4IeteBzlR9bCTYekru0PyNdN8="
       },
       {
+        "virtualPath": "FSharp.DependencyManager.Nuget.wasm",
+        "name": "FSharp.DependencyManager.Nuget.4dg5jst4hz.wasm",
+        "integrity": "sha256-6GoQokU2EwrBRvln92p4WZw51J8m1J+ekDFrNCPSqj4="
+      },
+      {
         "virtualPath": "FSharp.SystemTextJson.wasm",
         "name": "FSharp.SystemTextJson.4xswy3x42m.wasm",
         "integrity": "sha256-mEedPVjEHr/RBrRp4frxVLf3JZ9qTCVedGc9J9ttWJM="
@@ -96,11 +101,6 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
         "virtualPath": "Microsoft.AspNetCore.Metadata.wasm",
         "name": "Microsoft.AspNetCore.Metadata.begmnasal1.wasm",
         "integrity": "sha256-feTahvOhYuLDIgSFkwXDSewTMyzsM7M9tmjKWEjxeBI="
-      },
-      {
-        "virtualPath": "Microsoft.DotNet.HotReload.WebAssembly.Browser.wasm",
-        "name": "Microsoft.DotNet.HotReload.WebAssembly.Browser.vdogoxs6cm.wasm",
-        "integrity": "sha256-c1tB08GIbOIai2bA4PgA2IQ6tQSbxkg1YfB8lhzFdh4="
       },
       {
         "virtualPath": "Microsoft.Extensions.Configuration.wasm",
@@ -1059,55 +1059,45 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
       },
       {
         "virtualPath": "Bolero.wasm",
-        "name": "Bolero.5dpcg60mrs.wasm",
-        "integrity": "sha256-l4w4zdsULmKxM+1DGZjYB5g7FuiutQb9lkC27CTGSrw="
+        "name": "Bolero.45y2lp3wxb.wasm",
+        "integrity": "sha256-WIJ4///LS/plp7HJgvgy8nj6o69jkx9MJMtfbtdzSi4="
       },
       {
         "virtualPath": "Bolero.Html.wasm",
-        "name": "Bolero.Html.3e362ec9xr.wasm",
-        "integrity": "sha256-q5BOUY472YJAQ6DgdP0viHeAOLdTTFwDzCdQeDjzI7U="
+        "name": "Bolero.Html.5auy11gf2t.wasm",
+        "integrity": "sha256-My2mo5RR90OEoSFRzojwJraGzpKRsghooA6JLMtG0Ik="
       },
       {
         "virtualPath": "FSharp.Compiler.Service.wasm",
-        "name": "FSharp.Compiler.Service.pla4z2nd76.wasm",
-        "integrity": "sha256-rQk8ZVELdf5igGkOQFCloqrZ7l8sQeVXjYQ9xOkiwFA="
-      },
-      {
-        "virtualPath": "FSharp.DependencyManager.Nuget.wasm",
-        "name": "FSharp.DependencyManager.Nuget.y1lqdghkjw.wasm",
-        "integrity": "sha256-Fmq6OexVVlAWLVyF/bgPMka95VZej0KDDJIBcIYgdak="
+        "name": "FSharp.Compiler.Service.y25da23jsl.wasm",
+        "integrity": "sha256-BiPlrfLO4o//Rf8X/3FLl+7bC9TYvXORbLqk4SNX4C4="
       },
       {
         "virtualPath": "WasmScriptPoc.wasm",
-        "name": "WasmScriptPoc.nr2xf4jibd.wasm",
-        "integrity": "sha256-vcRP3xoV8ZiiRboObqWYvKVpYy24lnNFaekc7Aku9fg="
+        "name": "WasmScriptPoc.h5wuytawcv.wasm",
+        "integrity": "sha256-u2u3Isz+xz2BEiO+Ib+QXs2uUxnyEwkKUYACNWUIogk="
       }
     ],
     "pdb": [
       {
         "virtualPath": "FSharp.Compiler.Service.pdb",
-        "name": "FSharp.Compiler.Service.oepugkh81q.pdb",
-        "integrity": "sha256-IMw/2iS3DZo/aso5AIsvitoHjCo52dBVE9uUQDS3QSg="
-      },
-      {
-        "virtualPath": "FSharp.DependencyManager.Nuget.pdb",
-        "name": "FSharp.DependencyManager.Nuget.7ocgbfr8cd.pdb",
-        "integrity": "sha256-2SQCuMDPy+bcKBrb/hmE7A8XTjn44QvF8BajzqdM/h0="
+        "name": "FSharp.Compiler.Service.5c9t5p1zot.pdb",
+        "integrity": "sha256-ezLz2jrSPH6xnQeZtg6vq0KBtbxaf/kaDtuABPmwOos="
       },
       {
         "virtualPath": "Bolero.Html.pdb",
-        "name": "Bolero.Html.htg59llonv.pdb",
-        "integrity": "sha256-m67A89ldAr+y2ystGXqmYoVLbc3/pnfVfW9ybZr7fGM="
+        "name": "Bolero.Html.wpfogariib.pdb",
+        "integrity": "sha256-lA07HZLJlyhY1EcfSPjglPz54wEDwxcZHP2KtaMB3d8="
       },
       {
         "virtualPath": "Bolero.pdb",
-        "name": "Bolero.cpl0ynh6g7.pdb",
-        "integrity": "sha256-4Bsu3n0GwBgl2OgVIlTmleDyI0XkNnOK5hhq70Bc3bE="
+        "name": "Bolero.5z50lwmurj.pdb",
+        "integrity": "sha256-v0yTPyv9n1P0HP2Sy+QIOnFwLji6tHLnC2EylhcRYe8="
       },
       {
         "virtualPath": "WasmScriptPoc.pdb",
-        "name": "WasmScriptPoc.3wxw6lppyc.pdb",
-        "integrity": "sha256-bYLQ6x90yOLSe+pIszpFw0rBqARLFWMQ7RZznTDoiwo="
+        "name": "WasmScriptPoc.4cvyc8cu0c.pdb",
+        "integrity": "sha256-3EAeYRDuPheT06j6Y9NbRfpaYptYar5o57Y46DsNprY="
       }
     ],
     "satelliteResources": {
@@ -1202,17 +1192,7 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
           "integrity": "sha256-85uVTwOi3cy9LUQKwq7rpwD3Z6zRd2GR1QiPOXDByOQ="
         }
       ]
-    },
-    "libraryInitializers": [
-      {
-        "name": "_content/Microsoft.DotNet.HotReload.WebAssembly.Browser/Microsoft.DotNet.HotReload.WebAssembly.Browser.99zm1jdh75.lib.module.js"
-      }
-    ],
-    "modulesAfterConfigLoaded": [
-      {
-        "name": "../_content/Microsoft.DotNet.HotReload.WebAssembly.Browser/Microsoft.DotNet.HotReload.WebAssembly.Browser.99zm1jdh75.lib.module.js"
-      }
-    ]
+    }
   },
   "debugLevel": -1,
   "globalizationMode": "sharded",
@@ -1223,12 +1203,6 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
     "runtimeOptions": {
       "configProperties": {
         "Microsoft.AspNetCore.Components.Routing.RegexConstraintSupport": false,
-        "Microsoft.Extensions.DependencyInjection.VerifyOpenGenericServiceTrimmability": true,
-        "System.ComponentModel.DefaultValueAttribute.IsSupported": false,
-        "System.ComponentModel.Design.IDesignerHost.IsSupported": false,
-        "System.ComponentModel.TypeConverter.EnableUnsafeBinaryFormatterInDesigntimeLicenseContextSerialization": false,
-        "System.ComponentModel.TypeDescriptor.IsComObjectDescriptorSupported": false,
-        "System.Data.DataSet.XmlSerializationIsSupported": false,
         "System.Diagnostics.Metrics.Meter.IsSupported": false,
         "System.Diagnostics.Tracing.EventSource.IsSupported": false,
         "System.GC.Server": true,
@@ -1238,20 +1212,10 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
         "System.Net.Http.EnableActivityPropagation": false,
         "System.Net.Http.WasmEnableStreamingResponse": true,
         "System.Net.SocketsHttpHandler.Http3Support": false,
-        "System.Reflection.Metadata.MetadataUpdater.IsSupported": false,
-        "System.Resources.ResourceManager.AllowCustomResourceTypes": false,
         "System.Resources.UseSystemResourceKeys": true,
-        "System.Runtime.CompilerServices.RuntimeFeature.IsDynamicCodeSupported": true,
-        "System.Runtime.InteropServices.BuiltInComInterop.IsSupported": false,
-        "System.Runtime.InteropServices.EnableConsumingManagedCodeFromNativeHosting": false,
-        "System.Runtime.InteropServices.EnableCppCLIHostActivation": false,
-        "System.Runtime.InteropServices.Marshalling.EnableGeneratedComInterfaceComImportInterop": false,
         "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": false,
-        "System.StartupHookProvider.IsSupported": false,
         "System.Text.Encoding.EnableUnsafeUTF7Encoding": false,
-        "System.Text.Json.JsonSerializer.IsReflectionEnabledByDefault": true,
-        "System.Threading.Thread.EnableAutoreleasePool": false,
-        "Microsoft.AspNetCore.Components.Endpoints.NavigationManager.DisableThrowNavigationException": false
+        "System.Text.Json.JsonSerializer.IsReflectionEnabledByDefault": true
       }
     }
   }

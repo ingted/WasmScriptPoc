@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<linker>
+  <assembly fullname="WasmScriptPoc">
+    <resource name="FSharpSignatureData.WasmScriptPoc" action="remove"></resource>
+    <resource name="FSharpSignatureCompressedData.WasmScriptPoc" action="remove"></resource>
+    <resource name="FSharpSignatureDataB.WasmScriptPoc" action="remove"></resource>
+    <resource name="FSharpSignatureCompressedDataB.WasmScriptPoc" action="remove"></resource>
+    <resource name="FSharpOptimizationData.WasmScriptPoc" action="remove"></resource>
+    <resource name="FSharpOptimizationCompressedData.WasmScriptPoc" action="remove"></resource>
+    <resource name="FSharpOptimizationDataB.WasmScriptPoc" action="remove"></resource>
+    <resource name="FSharpOptimizationCompressedDataB.WasmScriptPoc" action="remove"></resource>
+    <resource name="FSharpOptimizationInfo.WasmScriptPoc" action="remove"></resource>
+    <resource name="FSharpSignatureInfo.WasmScriptPoc" action="remove"></resource>
+  </assembly>
+</linker>

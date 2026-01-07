@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<linker>
+  <!-- Preserve everything in FSharp.Core and FCS -->
+  <assembly fullname="FSharp.Core" preserve="all" />
+  <!--<assembly fullname="Bolero.FSharp.Compiler.Service" preserve="all" /> -->
+  <assembly fullname="WasmScriptPoc" preserve="all" />
+
+  <!-- Preserve compilation essentials -->
+  <assembly fullname="mscorlib" preserve="all" />
+  <assembly fullname="System.Private.CoreLib" preserve="all" />
+  <assembly fullname="netstandard" preserve="all" />
+  
+  <assembly fullname="System.Collections" preserve="all" />
+  <assembly fullname="System.Runtime" preserve="all" />
+  <assembly fullname="System.IO" preserve="all" />
+  <assembly fullname="System.Reflection" preserve="all" />
+  <assembly fullname="System.Linq" preserve="all" />
+  <assembly fullname="System.Linq.Expressions" preserve="all" />
+  <assembly fullname="System.Xml.Linq"></assembly>
+  <assembly fullname="System.Threading.Tasks"></assembly>
+  <assembly fullname="System.Console"></assembly>
+  <assembly fullname="System.Globalization"></assembly>
+  <assembly fullname="System.Linq.Expressions"></assembly>
+  <assembly fullname="System.Net.Http"></assembly>
+  <assembly fullname="System.Numerics"></assembly>
+  <assembly fullname="System.Reflection"></assembly>
+  <assembly fullname="System.Runtime.Extensions"></assembly>
+  <assembly fullname="System.Threading"></assembly>
+</linker>

@@ -69,6 +69,19 @@
           }
         }
       },
+      "FSharp.DependencyManager.Nuget/37.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/FSharp.DependencyManager.Nuget.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/FSharp.DependencyManager.Nuget.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "FSharp.SystemTextJson/0.19.13": {
         "type": "package",
         "dependencies": {
@@ -204,21 +217,6 @@
           "lib/net10.0/Microsoft.AspNetCore.Metadata.dll": {
             "related": ".xml"
           }
-        }
-      },
-      "Microsoft.DotNet.HotReload.WebAssembly.Browser/10.0.101": {
-        "type": "package",
-        "compile": {
-          "lib/net10.0/Microsoft.DotNet.HotReload.WebAssembly.Browser.dll": {}
-        },
-        "runtime": {
-          "lib/net10.0/Microsoft.DotNet.HotReload.WebAssembly.Browser.dll": {}
-        },
-        "build": {
-          "buildTransitive/Microsoft.DotNet.HotReload.WebAssembly.Browser.props": {}
-        },
-        "buildMultiTargeting": {
-          "buildMultiTargeting/Microsoft.DotNet.HotReload.WebAssembly.Browser.props": {}
         }
       },
       "Microsoft.Extensions.Configuration/10.0.0": {
@@ -626,12 +624,6 @@
           }
         }
       },
-      "Microsoft.NET.ILLink.Tasks/10.0.1": {
-        "type": "package",
-        "build": {
-          "build/Microsoft.NET.ILLink.Tasks.props": {}
-        }
-      },
       "Microsoft.NET.Sdk.WebAssembly.Pack/10.0.1": {
         "type": "package",
         "build": {
@@ -685,8 +677,8 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "FSharp.Core": "1.0.0",
-          "FSharp.DependencyManager.Nuget": "1.0.0"
+          "FSharp.Core": "10.0.101",
+          "FSharp.DependencyManager.Nuget": "37.0.0"
         },
         "compile": {
           "bin/placeholder/Bolero.FSharp.Compiler.Service.dll": {}
@@ -706,19 +698,6 @@
         },
         "runtime": {
           "bin/placeholder/Bolero.Html.dll": {}
-        }
-      },
-      "FSharp.DependencyManager.Nuget/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "dependencies": {
-          "FSharp.Core": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/FSharp.DependencyManager.Nuget.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/FSharp.DependencyManager.Nuget.dll": {}
         }
       }
     },
@@ -790,6 +769,19 @@
           }
         }
       },
+      "FSharp.DependencyManager.Nuget/37.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/FSharp.DependencyManager.Nuget.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/FSharp.DependencyManager.Nuget.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "FSharp.SystemTextJson/0.19.13": {
         "type": "package",
         "dependencies": {
@@ -925,21 +917,6 @@
           "lib/net10.0/Microsoft.AspNetCore.Metadata.dll": {
             "related": ".xml"
           }
-        }
-      },
-      "Microsoft.DotNet.HotReload.WebAssembly.Browser/10.0.101": {
-        "type": "package",
-        "compile": {
-          "lib/net10.0/Microsoft.DotNet.HotReload.WebAssembly.Browser.dll": {}
-        },
-        "runtime": {
-          "lib/net10.0/Microsoft.DotNet.HotReload.WebAssembly.Browser.dll": {}
-        },
-        "build": {
-          "buildTransitive/Microsoft.DotNet.HotReload.WebAssembly.Browser.props": {}
-        },
-        "buildMultiTargeting": {
-          "buildMultiTargeting/Microsoft.DotNet.HotReload.WebAssembly.Browser.props": {}
         }
       },
       "Microsoft.Extensions.Configuration/10.0.0": {
@@ -1347,12 +1324,6 @@
           }
         }
       },
-      "Microsoft.NET.ILLink.Tasks/10.0.1": {
-        "type": "package",
-        "build": {
-          "build/Microsoft.NET.ILLink.Tasks.props": {}
-        }
-      },
       "Microsoft.NET.Sdk.WebAssembly.Pack/10.0.1": {
         "type": "package",
         "build": {
@@ -1406,8 +1377,8 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "FSharp.Core": "1.0.0",
-          "FSharp.DependencyManager.Nuget": "1.0.0"
+          "FSharp.Core": "10.0.101",
+          "FSharp.DependencyManager.Nuget": "37.0.0"
         },
         "compile": {
           "bin/placeholder/Bolero.FSharp.Compiler.Service.dll": {}
@@ -1427,19 +1398,6 @@
         },
         "runtime": {
           "bin/placeholder/Bolero.Html.dll": {}
-        }
-      },
-      "FSharp.DependencyManager.Nuget/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "dependencies": {
-          "FSharp.Core": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/FSharp.DependencyManager.Nuget.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/FSharp.DependencyManager.Nuget.dll": {}
         }
       }
     }
@@ -1500,6 +1458,20 @@
         "lib/netstandard2.1/tr/FSharp.Core.resources.dll",
         "lib/netstandard2.1/zh-Hans/FSharp.Core.resources.dll",
         "lib/netstandard2.1/zh-Hant/FSharp.Core.resources.dll"
+      ]
+    },
+    "FSharp.DependencyManager.Nuget/37.0.0": {
+      "sha512": "cTUsBab9poh6/RWyMOzAsRST/40EGf+WswzycS0fFoMMDMxThOaCn6WhMB7DmGtYfqAxKWMf885eAsDjHLxi/g==",
+      "type": "package",
+      "path": "fsharp.dependencymanager.nuget/37.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fsharp.dependencymanager.nuget.37.0.0.nupkg.sha512",
+        "fsharp.dependencymanager.nuget.nuspec",
+        "lib/netstandard2.0/FSharp.DependencyManager.Nuget.dll",
+        "lib/netstandard2.0/FSharp.DependencyManager.Nuget.xml",
+        "logo.png"
       ]
     },
     "FSharp.SystemTextJson/0.19.13": {
@@ -1802,25 +1774,6 @@
         "lib/netstandard2.0/Microsoft.AspNetCore.Metadata.xml",
         "microsoft.aspnetcore.metadata.10.0.0.nupkg.sha512",
         "microsoft.aspnetcore.metadata.nuspec"
-      ]
-    },
-    "Microsoft.DotNet.HotReload.WebAssembly.Browser/10.0.101": {
-      "sha512": "30d2d7ti8GiDYf9zg4+w5cvH3jm9HAQMyXzZgCVpEjmh3WLErJazuu2tyoIO75uNYLWPD/NNTTRD9SoPpDiACw==",
-      "type": "package",
-      "path": "microsoft.dotnet.hotreload.webassembly.browser/10.0.101",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "build/Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
-        "build/Microsoft.AspNetCore.StaticWebAssets.props",
-        "build/Microsoft.DotNet.HotReload.WebAssembly.Browser.props",
-        "buildMultiTargeting/Microsoft.DotNet.HotReload.WebAssembly.Browser.props",
-        "buildTransitive/Microsoft.DotNet.HotReload.WebAssembly.Browser.props",
-        "lib/net10.0/Microsoft.DotNet.HotReload.WebAssembly.Browser.dll",
-        "microsoft.dotnet.hotreload.webassembly.browser.10.0.101.nupkg.sha512",
-        "microsoft.dotnet.hotreload.webassembly.browser.nuspec",
-        "staticwebassets/Microsoft.DotNet.HotReload.WebAssembly.Browser.99zm1jdh75.lib.module.js"
       ]
     },
     "Microsoft.Extensions.Configuration/10.0.0": {
@@ -2467,56 +2420,6 @@
         "microsoft.jsinterop.webassembly.nuspec"
       ]
     },
-    "Microsoft.NET.ILLink.Tasks/10.0.1": {
-      "sha512": "ISahzLHsHY7vrwqr2p1YWZ+gsxoBRtH7gWRDK8fDUst9pp2He0GiesaqEfeX0V8QMCJM3eNEHGGpnIcPjFo2NQ==",
-      "type": "package",
-      "path": "microsoft.net.illink.tasks/10.0.1",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "Sdk/Sdk.props",
-        "THIRD-PARTY-NOTICES.TXT",
-        "analyzers/dotnet/cs/ILLink.CodeFixProvider.dll",
-        "analyzers/dotnet/cs/ILLink.RoslynAnalyzer.dll",
-        "build/Microsoft.NET.ILLink.Analyzers.props",
-        "build/Microsoft.NET.ILLink.Tasks.props",
-        "build/Microsoft.NET.ILLink.targets",
-        "microsoft.net.illink.tasks.10.0.1.nupkg.sha512",
-        "microsoft.net.illink.tasks.nuspec",
-        "tools/net/ILLink.Tasks.deps.json",
-        "tools/net/ILLink.Tasks.dll",
-        "tools/net/Mono.Cecil.Mdb.dll",
-        "tools/net/Mono.Cecil.Pdb.dll",
-        "tools/net/Mono.Cecil.Rocks.dll",
-        "tools/net/Mono.Cecil.dll",
-        "tools/net/Sdk/Sdk.props",
-        "tools/net/build/Microsoft.NET.ILLink.Analyzers.props",
-        "tools/net/build/Microsoft.NET.ILLink.Tasks.props",
-        "tools/net/build/Microsoft.NET.ILLink.targets",
-        "tools/net/illink.deps.json",
-        "tools/net/illink.dll",
-        "tools/net/illink.runtimeconfig.json",
-        "tools/netframework/ILLink.Tasks.dll",
-        "tools/netframework/ILLink.Tasks.dll.config",
-        "tools/netframework/Mono.Cecil.Mdb.dll",
-        "tools/netframework/Mono.Cecil.Pdb.dll",
-        "tools/netframework/Mono.Cecil.Rocks.dll",
-        "tools/netframework/Mono.Cecil.dll",
-        "tools/netframework/Sdk/Sdk.props",
-        "tools/netframework/System.Buffers.dll",
-        "tools/netframework/System.Collections.Immutable.dll",
-        "tools/netframework/System.Memory.dll",
-        "tools/netframework/System.Numerics.Vectors.dll",
-        "tools/netframework/System.Reflection.Metadata.dll",
-        "tools/netframework/System.Runtime.CompilerServices.Unsafe.dll",
-        "tools/netframework/build/Microsoft.NET.ILLink.Analyzers.props",
-        "tools/netframework/build/Microsoft.NET.ILLink.Tasks.props",
-        "tools/netframework/build/Microsoft.NET.ILLink.targets",
-        "useSharedDesignerContext.txt"
-      ]
-    },
     "Microsoft.NET.Sdk.WebAssembly.Pack/10.0.1": {
       "sha512": "5l5jXI7M1c5E9frcOkEGsfjppEeH6F3LCwfnyDE6mcYCDQCAC1S/Oh0itwYVKjXh6G4FdpxhnlMQ7g87f9mq2g==",
       "type": "package",
@@ -2572,11 +2475,6 @@
       "type": "project",
       "path": "../Bolero/src/Bolero.Html/Bolero.Html.fsproj",
       "msbuildProject": "../Bolero/src/Bolero.Html/Bolero.Html.fsproj"
-    },
-    "FSharp.DependencyManager.Nuget/1.0.0": {
-      "type": "project",
-      "path": "../Bolero.FCS.Build - Copy/src/FSharp.DependencyManager.Nuget/FSharp.DependencyManager.Nuget.fsproj",
-      "msbuildProject": "../Bolero.FCS.Build - Copy/src/FSharp.DependencyManager.Nuget/FSharp.DependencyManager.Nuget.fsproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -2585,11 +2483,8 @@
       "Bolero.FSharp.Compiler.Service >= 1.0.0",
       "Bolero.Html >= 1.0.0",
       "FSharp.Core >= 10.0.101",
-      "FSharp.DependencyManager.Nuget >= 1.0.0",
       "Microsoft.AspNetCore.Components.WebAssembly >= 10.0.0",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 10.0.0",
-      "Microsoft.DotNet.HotReload.WebAssembly.Browser >= 10.0.101",
-      "Microsoft.NET.ILLink.Tasks >= 10.0.1",
       "Microsoft.NET.Sdk.WebAssembly.Pack >= 10.0.1"
     ]
   },
@@ -2600,17 +2495,17 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "M:\\git\\WasmScriptPoc\\WasmScriptPoc.fsproj",
+      "projectUniqueName": "M:\\git\\WasmScriptPoc - Copy\\WasmScriptPoc.fsproj",
       "projectName": "WasmScriptPoc",
-      "projectPath": "M:\\git\\WasmScriptPoc\\WasmScriptPoc.fsproj",
+      "projectPath": "M:\\git\\WasmScriptPoc - Copy\\WasmScriptPoc.fsproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "M:\\git\\WasmScriptPoc\\obj\\",
+      "outputPath": "M:\\git\\WasmScriptPoc - Copy\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "M:\\git\\WasmScriptPoc\\NuGet.Config",
+        "M:\\git\\WasmScriptPoc - Copy\\NuGet.Config",
         "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -2632,9 +2527,6 @@
           "projectReferences": {
             "M:\\git\\Bolero.FCS.Build - Copy\\src\\Compiler\\Bolero.FSharp.Compiler.Service.fsproj": {
               "projectPath": "M:\\git\\Bolero.FCS.Build - Copy\\src\\Compiler\\Bolero.FSharp.Compiler.Service.fsproj"
-            },
-            "M:\\git\\Bolero.FCS.Build - Copy\\src\\FSharp.DependencyManager.Nuget\\FSharp.DependencyManager.Nuget.fsproj": {
-              "projectPath": "M:\\git\\Bolero.FCS.Build - Copy\\src\\FSharp.DependencyManager.Nuget\\FSharp.DependencyManager.Nuget.fsproj"
             },
             "M:\\git\\Bolero\\src\\Bolero.Html\\Bolero.Html.fsproj": {
               "projectPath": "M:\\git\\Bolero\\src\\Bolero.Html\\Bolero.Html.fsproj"
@@ -2671,19 +2563,6 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[10.0.0, )",
-            "generatePathProperty": true
-          },
-          "Microsoft.DotNet.HotReload.WebAssembly.Browser": {
-            "target": "Package",
-            "version": "[10.0.101, )",
-            "autoReferenced": true,
-            "generatePathProperty": true
-          },
-          "Microsoft.NET.ILLink.Tasks": {
-            "suppressParent": "All",
-            "target": "Package",
-            "version": "[10.0.1, )",
-            "autoReferenced": true,
             "generatePathProperty": true
           },
           "Microsoft.NET.Sdk.WebAssembly.Pack": {

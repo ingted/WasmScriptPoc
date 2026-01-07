@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+  <Import Project="..\Bolero\src\Bolero.Build\Bolero.Build.props" />
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <BoleroTaskAssemblyPath>M:\git\Bolero\src\Bolero.Build\bin\Debug\netstandard2.0\Bolero.Build.dll</BoleroTaskAssemblyPath>
+    <EmccTotalMemory>536870912</EmccTotalMemory>
+    <!-- <WasmBuildNative>true</WasmBuildNative> -->
+    <PublishTrimmed>false</PublishTrimmed>
+    <BlazorEnableCompression>false</BlazorEnableCompression>
+    <!-- <DisableImplicitFSharpCoreReference>true</DisableImplicitFSharpCoreReference> -->
+    <TypeScriptToolsVersion>3.3</TypeScriptToolsVersion>
+<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+<RazorLangVersion>3.0</RazorLangVersion>
+<BoleroStripAssemblies>false</BoleroStripAssemblies>
+<BlazorWebAssemblyEnableLinking>true</BlazorWebAssemblyEnableLinking>
+<WasmEnableHotReload>false</WasmEnableHotReload>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmccFlags Include="-s STACK_SIZE=16777216" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bolero.FCS.Build - Copy\src\Compiler\Bolero.FSharp.Compiler.Service.fsproj" />
+    <!-- 
+      Replaced ProjectReference with direct Reference to force using the local artifact 
+      and avoid NuGet version conflicts from Bolero.
+    -->
+    <!--
+    <Reference Include="FSharp.Core">
+        <HintPath>..\Bolero.FCS.Build - Copy\artifacts\bin\FSharp.Core\$(Configuration)\netstandard2.0\FSharp.Core.dll</HintPath>
+    </Reference>
+    -->
+    <ProjectReference Include="..\Bolero\src\Bolero.Html\Bolero.Html.fsproj" />
+    <ProjectReference Include="..\Bolero\src\Bolero\Bolero.fsproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="linker.xml" />
+    <Content Include="linker.xml" />
+    <BlazorLinkerDescriptor Include="linker.xml" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="10.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="10.0.0" PrivateAssets="all" />
+  </ItemGroup>
+  <Import Project="..\Bolero\src\Bolero.Build\Bolero.Build.targets" />
+  <Import Project="..\Bolero\src\Bolero\Bolero.targets" />
+  
+  <!-- Post-build target to copy refs to wwwroot/refs for the in-browser compiler -->
+  <Target Name="CopyRefs" AfterTargets="Build">
+    <ItemGroup>
+      <!-- We explicitly pick the ReferencePath corresponding to FSharp.Core to ensure we copy the one we resolved -->
+      <LocalFSharpCore Include="@(ReferencePath)" Condition="'%(FileName)' == 'FSharp.Core'" />
+      <OtherRefs Include="$(TargetDir)*.dll" Exclude="$(TargetDir)FSharp.Core.dll" />
+    </ItemGroup>
+    
+    <Copy SourceFiles="@(OtherRefs)" DestinationFolder="wwwroot/refs" />
+    <Copy SourceFiles="@(LocalFSharpCore)" DestinationFolder="wwwroot/refs" />
+  </Target>
+</Project>

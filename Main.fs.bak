@@ -1,0 +1,225 @@
+﻿module WasmScriptPoc.Main
+
+open System
+open System.Net.Http
+open System.IO
+open Microsoft.AspNetCore.Components.WebAssembly.Hosting
+open Microsoft.AspNetCore.Components
+open Microsoft.Extensions.DependencyInjection
+open Microsoft.FSharp.Core.ExtraTopLevelOperators
+open Elmish
+open Bolero
+open Bolero.Html
+open FSharp.Compiler.CodeAnalysis
+open FSharp.Compiler.Text
+
+// --- Compiler Logic ---
+
+type CompilerStatus = 
+    | Standby
+    | Running
+    | Success of string
+    | Failure of string
+
+type Compiler = 
+    {
+        Checker: FSharpChecker
+        Options: FSharpProjectOptions
+        Status: CompilerStatus
+    }
+
+module Compiler = 
+    let projFile = "/tmp/out.fsproj"
+    let inFile = "/tmp/Main.fs"
+    let outFile = "/tmp/out.exe"
+
+    // These filenames depend on what's available in the build output.
+    // We'll try to load the basics.
+    let referenceFiles = 
+        [ 
+          "FSharp.Core.dll"
+          "System.Private.CoreLib.dll" 
+          "System.Runtime.Numerics.dll" 
+          "System.Collections.dll" 
+          "System.Net.Requests.dll" 
+          "System.Net.WebClient.dll" 
+          //"mscorlib.dll"
+          "netstandard.dll"
+          "System.dll"
+          "System.Runtime.dll"
+          "System.Core.dll"
+          "System.Console.dll"
+          "System.IO.dll"
+        ]
+
+    let ensureReferences (http: HttpClient) = async {
+        if not (Directory.Exists("/tmp")) then Directory.CreateDirectory("/tmp") |> ignore
+        for fileName in referenceFiles do
+            let targetPath = Path.Combine("/tmp", fileName)
+            if not (File.Exists(targetPath)) then
+                try
+                    // Try to fetch from refs/
+                    let! bytes = http.GetByteArrayAsync("refs/" + fileName) |> Async.AwaitTask
+                    File.WriteAllBytes(targetPath, bytes)
+                    printfn "Loaded %s" fileName
+                with e ->
+                    printfn "Warning: Failed to download %s: %s" fileName e.Message
+    }
+
+    let create (http: HttpClient) = async {
+        do! ensureReferences http
+        let checker = FSharpChecker.Create(keepAssemblyContents = true)
+        
+        let args = 
+            [|
+                "--simpleresolution"
+                "--optimize-"
+                "--noframework"
+                "--targetprofile:netstandard"
+                "--target:exe"
+                inFile
+                //"-r:/tmp/FSharp.Core.dll"
+                //"-r:/tmp/mscorlib.dll"
+                //"-r:/tmp/System.Private.CoreLib.dll"
+                //"-r:/tmp/netstandard.dll"
+                //"-r:/tmp/System.dll"
+                //"-r:/tmp/System.Core.dll"
+                //"-r:/tmp/System.IO.dll"
+                "-o:" + outFile
+            |]
+        
+        // Add references
+        let refs = 
+            referenceFiles 
+            |> List.filter (fun r -> File.Exists(Path.Combine("/tmp", r)))
+            |> List.map (fun r -> "-r:/tmp/" + r) 
+            |> Array.ofList
+            
+        let finalArgs = Array.append args refs
+        
+        let options = checker.GetProjectOptionsFromCommandLineArgs(projFile, finalArgs)
+        
+        return { Checker = checker; Options = options; Status = Standby }
+    }
+
+    let run (compiler: Compiler) (source: string) = async {
+        File.WriteAllText(inFile, source)
+        
+        // Update source files in options? GetProjectOptionsFromCommandLineArgs should be enough if we re-call it or just rely on file system
+        // But ParseAndCheckProject reads from file usually.
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        // printfn "DEBUG: Arguments: %A" finalArgs
+        let! (errors, exitCode) = compiler.Checker.Compile(Array.append compiler.Options.OtherOptions compiler.Options.SourceFiles)
+        
+        let errorMsg = 
+            errors 
+            |> Array.map (fun e -> sprintf "%s: %s" (e.Severity.ToString()) e.Message)
+            |> String.concat "\n"
+        
+        if Option.isNone exitCode && errorMsg.Contains("Error") |> not then
+             return Success ("Compilation Successful!\n" + errorMsg)
+        else
+             return Failure errorMsg
+    }
+
+// --- App Logic ---
+
+type Model = 
+    {
+        Code: string
+        Output: string
+        Compiler: Compiler option
+    }
+
+type Message = 
+    | SetCode of string
+    | Run
+    | CompilerReady of Compiler
+    | CompilationFinished of CompilerStatus
+    | Error of exn
+
+let update message model =
+    match message with
+    | SetCode code -> { model with Code = code }, Cmd.none
+    | Run ->
+        match model.Compiler with
+        | Some compiler ->
+            { model with Output = "Compiling..." },
+            Cmd.OfAsync.either (fun () -> Compiler.run compiler model.Code) () CompilationFinished Error
+        | None -> model, Cmd.none
+    | CompilerReady compiler ->
+        { model with Compiler = Some compiler; Output = "Compiler Ready. Click Run." }, Cmd.none
+    | CompilationFinished status ->
+        match status with
+        | Success msg -> { model with Output = msg }, Cmd.none
+        | Failure msg -> { model with Output = "Error:\n" + msg }, Cmd.none
+        | Running -> { model with Output = "Compiling..." }, Cmd.none
+        | Standby -> model, Cmd.none
+    | Error exn ->
+        { model with Output = sprintf "EXCEPTION: %s\nStack: %s" exn.Message exn.StackTrace }, Cmd.none
+
+let view model dispatch =
+    div {
+        //h1 { "Wasm Script POC" }
+        p { "Enter F# code below:" }
+        textarea {
+            attr.value model.Code
+            attr.style "width: 100%; height: 200px; font-family: monospace;"
+            on.change (fun e -> dispatch (SetCode (unbox e.Value)))
+        }
+        br {}
+        button {
+            on.click (fun _ -> dispatch Run)
+            attr.disabled (if model.Compiler.IsNone then "true" else null)
+            "Compile & Run"
+        }
+        br {}
+        h3 { "Output" }
+        pre {
+            attr.style "background: #f0f0f0; padding: 10px; white-space: pre-wrap;"
+            model.Output
+        }
+    }
+
+type MyApp() =
+    inherit ProgramComponent<Model, Message>()
+    
+    [<Inject>]
+    member val HttpClient = Unchecked.defaultof<HttpClient> with get, set
+
+    override this.Program =
+        let init _ = 
+            { Code = "let x = 42\nprintfn \"Answer: %d\" x"; Output = "Loading compiler (fetching DLLs)..."; Compiler = None },
+            Cmd.OfAsync.either (Compiler.create) this.HttpClient CompilerReady Error
+
+        Program.mkProgram init update view
+
+module Program = 
+    [<EntryPoint>]
+    let Main args =
+        let asm = typeof<list<int>>.Assembly
+        Console.WriteLine($"DEBUG: FSharp.Core loaded from: {asm.Location}")
+        Console.WriteLine($"DEBUG: FSharp.Core version: {asm.GetName().Version}")
+        
+        System.Environment.SetEnvironmentVariable("FSharp_CacheEvictionImmediate", "1")
+        System.Environment.SetEnvironmentVariable("FCS_BROWSER", "1")
+        System.Environment.SetEnvironmentVariable("FCS_ParallelReferenceResolution", "false")
+        let builder = WebAssemblyHostBuilder.CreateDefault(args)
+        builder.Services.AddScoped<HttpClient>(fun sp -> new HttpClient(BaseAddress = Uri(builder.HostEnvironment.BaseAddress))) |> ignore
+        builder.RootComponents.Add<MyApp>("#main")
+        builder.Build().RunAsync() |> ignore
+        0
